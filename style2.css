@@ -1,0 +1,12 @@
+.tabel {
+    background-color: orange;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: -0.5rem 0.5rem 1rem gray;
+    text-align: center;
+}
+
+body {
+    margin: 25px 300px;
+    align-items: center;
+}

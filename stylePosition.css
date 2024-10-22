@@ -1,0 +1,9 @@
+.register {
+    height: 40px;
+    width: 100px;
+    background-color: teal;
+    color: black;
+    position: relative;
+    left: 100px;
+    top: 75px;
+}
