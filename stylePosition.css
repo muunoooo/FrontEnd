@@ -1,11 +1,19 @@
+body {
+    /* background: url(https://cdnb.artstation.com/p/assets/images/images/052/004/767/original/yurii-ray-06-gif-export-200.gif?1658731969);
+    background-position: 100%; */
+    margin: 0px;
+    position: absolute;
+}
+
 .register {
     height: 40px;
     width: 100px;
     background-color: teal;
     color: black;
     position: relative;
-    /* left: 100px;
-    top: 75px; */
+    left: 100px;
+    top: 75px;
+    z-index: 1;
 }
 
 .promo {
@@ -18,4 +26,52 @@
     rotate: 45deg;
     top: -5px;
     right: -25px;
+}
+
+.kontak {
+    height: 70px;
+    width: 70px;
+    background-color: greenyellow;
+    color: black;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+}
+
+.navbar {
+    margin-bottom: 50px;
+    height: 80px;
+    width: 100%;
+    background-color: green;
+    color: wheat;
+    text-align: center;
+    align-content: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.navbar2 {
+    height: 30px;
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    align-content: center;
+    position: sticky;
+    top: 80px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        background-color: cyan;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        background-color: pink;
+    }
 }
