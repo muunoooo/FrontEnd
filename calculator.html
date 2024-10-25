@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            margin: 100px;
+            text-align: center;
+            background-image: url(https://i.pinimg.com/originals/4b/26/1f/4b261f5fe2a4dbb63e7db5a40622dc99.gif);
+            background-size: 100%;
+        }
+        #content {
+            max-width: 310px;
+            max-height: 400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px; 
+            border: 20px solid black;
+            background-color: black;
+            border-radius: 25px;
+            font-size: x-large;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #content div:hover {
+            cursor: pointer;
+        }
+        #content div {
+            background: white;
+            padding:20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        #content .kotak1{
+            grid-column: 1 / 5;
+            background-color: rgb(83, 228, 47);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: end;
+        }
+        #content .kotak2{
+            background-color: rgb(224, 18, 18);
+            color: white;
+        }
+        #content .kotak3{
+            background-color: blue;
+            color: white;
+        }
+        #content .kotak4{
+            background-color: blue;
+            color: white;
+        }
+        #content .kotak5{
+            background-color: blue;
+            color: white;
+        }
+        #content .kotak9{
+            background-color: blue;
+            color: white;
+        }
+        button {
+            height: 50px;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        button :hover {
+            background-color: gray;
+        }
+        
+        .kotak13 {
+            align-content: center;
+            text-align: center;
+            grid-column: 4 / 5;
+            grid-row: 4 / 7;
+            background-color: greenyellow;
+            color: white;
+            height: 100%;   
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <!-- div#content>div.kontak$*9{$} -->
+    <div id="content">
+        <input class="kotak1" disabled></input>
+        <button class="kotak2"; >C</button>
+        <button class="kotak3">/</button>
+        <button class="kotak4">*</button>
+        <button class="kotak5">-</button>
+        <button class="kotak6">7</button>
+        <button class="kotak7">8</button>
+        <button class="kotak8">9</button>
+        <button class="kotak9">+</button>
+        <button class="kotak10">4</button>
+        <button class="kotak11">5</button>
+        <button class="kotak12">6</button>
+        <button class="kotak13">=</button>
+        <button class="kotak14">1</button>
+        <button class="kotak15">2</button>
+        <button class="kotak16">3</button>
+        <button class="kotak17">0</button>
+        <button class="kotak18">.</button>
+        <!-- <div class="kotak10">10</div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
