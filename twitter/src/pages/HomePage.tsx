@@ -1,14 +1,16 @@
-function HomePage() {
-  return (
-    <header className="h-[100vh] w-full flex bg-black items-center text-center">
-      <div className="flex-1 text-white">
-        <p>Logo</p>
-      </div>
-      <div className="flex-1 text-white">
-        <p>Login</p>
-      </div>
-    </header>
-  );
+import { Beranda } from "../components/beranda"
+import Leftbar from "../components/leftbar"
+import RightBar from "../components/rightbar"
+
+function HomePage () {
+    return (
+        // Body
+        <div className="flex bg-black text-white h-[100vh] w-auto justify-center">
+            <Leftbar/>
+            <Beranda/>
+            <RightBar/>
+        </div>
+    )
 }
 
-export default HomePage;
+export default HomePage

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Field, Form, Formik, FormikProps } from "formik";
 
 const RegisterSchema = Yup.object().shape({
-  username: Yup.string().required("username is required!"),
   email: Yup.string()
     .email("invalid email format!")
     .required("email is required!"),
@@ -14,14 +13,13 @@ const RegisterSchema = Yup.object().shape({
 });
 
 interface FormValues {
-  username: string;
   email: string;
   password: string;
 }
 
-function RegisterPage() {
+function LoginPage() {
   const navigate = useNavigate();
-  const initialValue: FormValues = { username: "", email: "", password: "" };
+  const initialValue: FormValues = { email: "", password: "" };
 
   const handleAdd = async (user: FormValues) => {
     try {
@@ -36,9 +34,9 @@ function RegisterPage() {
   return (
     <div className="bg-[url('/twitter.jpg')] h-[100vh] w-full bg-opacity-75 flex justify-center items-center">
       <div className="bg-black h-[100vh] w-full bg-opacity-75 flex justify-center items-center">
-        <div className="bg-black h-[550px] w-[600px] rounded-3xl text-white">
+        <div className="bg-black h-[400px] w-auto rounded-3xl text-white">
           <div className="ml-[20px] mr-[20px] mt-[40px]">
-            <div className="flex">
+            <div className="flex mt-10">
               <svg
                 className="w-[50px] h-[50px] text-gray-800 dark:text-white mr-[80px]"
                 aria-hidden="true"
@@ -55,9 +53,14 @@ function RegisterPage() {
                 />
               </svg>
               <p className="font-bold text-4xl text-center">
-                Create an account
+                Login
               </p>
-              <a href="http://localhost:5173/" className="font-bold text-xl ml-[80px]">back</a>
+              <a
+                href="http://localhost:5173/"
+                className="font-bold text-xl ml-[80px]"
+              >
+                back
+              </a>
             </div>
             <Formik
               initialValues={initialValue}
@@ -71,28 +74,7 @@ function RegisterPage() {
                 const { handleChange, values, touched, errors } = props;
                 return (
                   <Form className="flex flex-col gap-2 min-w-[400px]">
-                    <div className="mb-2">
-                      <label
-                        htmlFor="username"
-                        className="block mb-2 text-sm font-medium text-white mt-10"
-                      >
-                        Username :
-                      </label>
-                      <Field
-                        type="text"
-                        name="username"
-                        onChange={handleChange}
-                        value={values.username}
-                        className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                        placeholder="Username"
-                      />
-                      {touched.username && errors.username ? (
-                        <div className="text-red-500 text-xs">
-                          {errors.username}
-                        </div>
-                      ) : null}
-                    </div>
-                    <div className="mb-2">
+                    <div className="mb-2 mt-5">
                       <label
                         htmlFor="email"
                         className="block mb-2 text-sm font-medium text-white"
@@ -151,4 +133,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default LoginPage;
