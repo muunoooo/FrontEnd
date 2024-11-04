@@ -23,6 +23,18 @@
       "username": "Andi",
       "email": "Andi@gmail.com",
       "password": "andi1234"
+    },
+    {
+      "id": "856c",
+      "username": "Dodo",
+      "email": "dodo@gmail.com",
+      "password": "Asd1234"
+    },
+    {
+      "id": "374d",
+      "username": "Edy",
+      "email": "Edy@gmail.com",
+      "password": "asd1234"
     }
   ]
 }
