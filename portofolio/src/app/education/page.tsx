@@ -12,11 +12,7 @@ export default function Education() {
       {/* Purwadhika Digital School Section */}
       <div className="w-full md:w-1/3 flex flex-col justify-center items-center text-center relative z-10 p-4">
         <div className="bg-white bg-opacity-80 p-4 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-          <img
-            src="https://www.myeducationrepublic.com/wp-content/uploads/2022/12/Cara-Daftar-Biaya-Kuliah-di-Purwadhika-Digital-Technology-School-2023.png"
-            alt="Education graphic"
-            className="w-full h-auto mb-4 rounded-lg"
-          />
+          <Image src={"/purwadhika.png"} alt="logo" width={200} height={200} />
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
             Purwadhika Digital School
           </h3>
@@ -51,11 +47,17 @@ export default function Education() {
 
       {/* Padjadjaran University Section */}
       <div className="w-full md:w-1/3 flex flex-col justify-center items-center text-center relative z-10 p-4">
-        <div className="bg-white bg-opacity-80 p-4 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-          <img
-            src="/LogoUNPADcolor.png"
-            alt="UNPAD logo"
-            className="w-full h-auto mb-4 rounded-lg"
+        <div
+          className="bg-white bg-opacity-80 p-4 rounded-lg 
+        items-center
+        shadow-lg transition-transform duration-300 hover:scale-105"
+        >
+          <Image
+            src={"/LogoUNPADcolor.png"}
+            alt="logo"
+            width={200}
+            height={200}
+            className=""
           />
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
             Padjadjaran University

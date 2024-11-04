@@ -10,7 +10,7 @@ export default function Home() {
       style={{ backgroundImage: "url('/bg.svg')" }}
     >
       <div className="flex flex-col items-center text-black font-bold">
-        <h1 className="text-3xl md:text-4xl mb-4">I'm Muno</h1>
+        <h1 className="text-3xl md:text-4xl mb-4">I&apos;Muno</h1>
         <TypeAnimation
           className="flex-1"
           sequence={[
