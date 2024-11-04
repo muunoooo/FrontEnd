@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Education() {
   return (
     <div
       id="education"
       style={{ backgroundImage: "url('/bg.svg')" }}
-      className="w-full h-auto min-h-screen bg-cover bg-center flex flex-wrap justify-center items-center relative p-4"
+      className="w-full h-[100vh] bg-cover bg-center flex flex-wrap justify-center items-center relative p-4"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-70"></div>
 
@@ -38,9 +40,11 @@ export default function Education() {
             School.
           </p>
         </div>
-        <img
-          src="/onum4.jpg"
-          alt="myself"
+        <Image
+          src={"/Education/onum10.JPG"}
+          alt="muno"
+          height={300}
+          width={300}
           className="w-2/3 md:w-1/3 h-auto rounded-full border-4 border-white shadow-lg transition-transform duration-300 hover:scale-105"
         />
       </div>
