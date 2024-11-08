@@ -1,6 +1,7 @@
+import RecommendationBlog from "@/components/recommendation";
 import ShareButton from "@/components/share";
 import Wrapper from "@/components/wrapper";
-import { getBlogs, getBlogSLug } from "@/libs/blog";
+import { getBlogRecom, getBlogs, getBlogSLug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
 import {
   documentToReactComponents,
@@ -42,6 +43,7 @@ export default async function BlogDetail({
   params: { slug: string };
 }) {
   const blog: IBlog = await getBlogSLug(params.slug);
+  const blogNe: IBlog [] = await getBlogRecom(params.slug)
 
   const options: Options = {
     renderMark: {
@@ -71,6 +73,7 @@ export default async function BlogDetail({
               back home
             </Link>
           </div>
+          <RecommendationBlog blogs={blogNe}/>
           <ShareButton slug={blog.fields.slug} />
         </div>
         <div className="flex-[2] box-content pr-56 max-lg:pr-0">

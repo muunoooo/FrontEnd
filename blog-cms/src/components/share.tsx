@@ -36,7 +36,7 @@ const share: IShare[] = [
 export default function ShareButton({ slug }: { slug: string }) {
   const domain = "https://konohablog.vercel.app/blog/";
   return (
-    <div className="sticky top-[120px]">
+    <div className="sticky">
       <p className=" uppercase font-bold text-[10px] ">Share to : </p>
       <div className="flex text-xl gap-2 my-2">
       <CoppyButton link={`${domain}${slug}`}/>

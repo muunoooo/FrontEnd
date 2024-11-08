@@ -32,7 +32,7 @@ export default function Card({
         />
       </div>
       <div className="p-4">
-        <h5 className="mb-2 text-md font-bold tracking-tight text-black dark:text-white">
+        <h5 className="mb-2 text-md font-bold tracking-tight text-black dark:text-white line-clamp-1">
           {splitStr(title, 50)}
         </h5>
         <div className="flex items-center my-5">

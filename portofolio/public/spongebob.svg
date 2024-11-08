@@ -93,8 +93,8 @@
               x="31.5"
               y="67.5"
               fill="#c29b67"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
             ></rect>
             <path
               fill="#422f2d"
