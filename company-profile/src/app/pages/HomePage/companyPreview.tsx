@@ -1,5 +1,6 @@
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ComPreview() {
   return (
@@ -14,8 +15,11 @@ export default function ComPreview() {
       <Wrapper>
         {/* Top text */}
         <div className="text-center mb-10 p-10">
-          <p className="font-bold text-3xl md:text-4xl mb-10">
-            WHAT IS <span className="text-[#2596be] italic text-4xl md:text-5xl">GEOVASI?</span>
+          <p className=" text-3xl md:text-4xl mb-10 md:mb-6">
+            What Is{" "}
+            <span className="text-[#2596be] font-bold italic text-4xl md:text-5xl">
+              GEOVASI?
+            </span>
           </p>
           <p className="px-5 md:px-20 text-pretty text-lg md:text-xl">
             <span className="text-[#2596be] font-extrabold">Geovasi </span>is a
@@ -31,6 +35,10 @@ export default function ComPreview() {
               developing your mining plan smartly
             </span>
           </p>
+          <Link href={"/"}>
+            <button className="btn bg-[#45daf8] text-black mt-10">About us</button>
+          </Link>
+
         </div>
 
         {/* Image row with centered middle image */}

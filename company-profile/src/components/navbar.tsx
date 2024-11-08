@@ -38,7 +38,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href={"/"}
+              href={"/about-us"}
               className="px-2 sm:px-3 md:px-4 lg:text-lg font-bold"
             >
               About Us

@@ -1,23 +1,31 @@
+import ShareButton from "@/components/share";
 import Wrapper from "@/components/wrapper";
 import { getBlogs, getBlogSLug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Document } from "@contentful/rich-text-types";
+import {
+  documentToReactComponents,
+  Options,
+} from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Image from "next/image";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
-// Fetch static params for blog slugs
 export const generateStaticParams = async () => {
   const blogs: IBlog[] = await getBlogs();
-  return blogs.map((item) => ({ slug: item.fields.slug }));
+
+  return blogs.map((item) => ({
+    slug: item.fields.slug,
+  }));
 };
 
-// Generate metadata for each blog post
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }) {
   const blog: IBlog = await getBlogSLug(params.slug);
+
   return {
     title: blog.fields.title,
     description: blog.fields.title,
@@ -28,7 +36,6 @@ export async function generateMetadata({
   };
 }
 
-// Blog detail component
 export default async function BlogDetail({
   params,
 }: {
@@ -36,62 +43,63 @@ export default async function BlogDetail({
 }) {
   const blog: IBlog = await getBlogSLug(params.slug);
 
-  if (!blog) return <p>Blog not found.</p>;
-
-  // Destructure fields for convenience
-  const { category, title, thumbnail, content } = blog.fields;
-  const thumbnailUrl = `https:${thumbnail.fields.file.url}`;
+  const options: Options = {
+    renderMark: {
+      [MARKS.ITALIC]: (text) => <span className="italic">{text}</span>,
+    },
+    renderNode: {
+      [BLOCKS.OL_LIST]: (node, children) => (
+        <ol className="list-decimal mx-6">{children}</ol>
+      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <p className="my-4">{children}</p>
+      ),
+      [BLOCKS.HEADING_2]: (node, children) => (
+        <h2 className="text-2xl my-4">{children}</h2>
+      ),
+    },
+  };
 
   return (
-    <div
-      className="relative h-auto flex bg-cover bg-no-repeat"
-      style={{ backgroundImage: 'url("/background.jpg")' }}
-    >
-      <Wrapper>
-        <div className="flex flex-col gap-3 items-center text-center text-white">
-          <CategoryLabel category={category} />
-          <BlogTitle title={title} />
-          <ThumbnailImage src={thumbnailUrl} alt="Blog Thumbnail" />
-          <BlogContent content={content} />
+    <Wrapper>
+      <div className="flex mt-6 w-full">
+        <div className="flex-1 max-md:hidden sticky top-[100px]">
+          <div className="flex flex-row gap-2">
+            <FaArrowLeft />
+            <Link href={"/"} className="sticky top-[100px] font-bold">
+              {" "}
+              back home
+            </Link>
+          </div>
+          <ShareButton slug={blog.fields.slug} />
         </div>
-      </Wrapper>
-    </div>
-  );
-}
-
-// Subcomponents
-function CategoryLabel({ category }: { category: string }) {
-  return (
-    <p className="bg-white text-black font-bold text-medium w-auto px-4 py-2 rounded-md">
-      {category}
-    </p>
-  );
-}
-
-function BlogTitle({ title }: { title: string }) {
-  return (
-    <h1 className="bg-white text-black font-bold text-lg w-auto px-4 py-2 rounded-md">
-      {title}
-    </h1>
-  );
-}
-
-function ThumbnailImage({ src, alt }: { src: string; alt: string }) {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={400}
-      height={400}
-      className="object-cover rounded-md"
-    />
-  );
-}
-
-function BlogContent({ content }: { content: Document }) {
-  return (
-    <div className="prose lg:prose-xl mt-4">
-      {documentToReactComponents(content)}
-    </div>
+        <div className="flex-[2] box-content pr-56 max-lg:pr-0">
+          <div className="text-sm font-bold text-green-700 uppercase">
+            {blog.fields.category}
+          </div>
+          <div className="text-3xl max-md:text-2xl font-bold my-4">
+            {blog.fields.title}
+          </div>
+          <div className="flex gap-2 text-sm">
+            <span className="font-bold">{blog.fields.author.fields.name}</span>
+            <span>∙</span>
+            <span>{blog.fields.date}</span>
+          </div>
+          <div className="md:hidden">
+            <ShareButton slug={blog.fields.slug} />
+          </div>
+          <div className="h-[400px] max-md:h-[300px] max-sm:h-[250px] w-full relative my-4">
+            <Image
+              src={`https:${blog.fields.thumbnail.fields.file.url}`}
+              alt={blog.fields.slug}
+              fill
+              className="object-fill"
+              priority
+            />
+          </div>
+          {documentToReactComponents(blog.fields.content, options)}
+        </div>
+      </div>
+    </Wrapper>
   );
 }

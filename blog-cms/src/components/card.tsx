@@ -30,9 +30,6 @@ export default function Card({
           fill
           priority
         />
-        {/* <span className=" absolute bg-gray-600 text-white px-2 m-2 right-0 text-xs rounded-sm ">
-          {category}
-        </span> */}
       </div>
       <div className="p-4">
         <h5 className="mb-2 text-md font-bold tracking-tight text-black dark:text-white">
