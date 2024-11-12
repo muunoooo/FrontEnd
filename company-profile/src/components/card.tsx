@@ -14,14 +14,14 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
     <div
       className="bg-black border flex flex-col 
     justify-center items-center object-center border-gray-200 rounded-lg shadow w-[200px] h-[440px] hover:scale-95"
+    
     >
-      <div className="rounded-t-lg  relative flex flex-col justify-center items-center object-center">
+      <div className="rounded-t-lg h-[200px] w-full relative">
         <Image
           className="rounded-t-lg"
           src={`https:${image}`}
           alt="Neil image"
-          width={200}
-          height={100}
+          fill
           priority
         />
       </div>
@@ -29,8 +29,14 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
         <h5 className="mb-2 text-md font-bold tracking-tight text-black dark:text-white line-clamp-1">
           {title}
         </h5>
-        <p className="text-sm"> <span className="text-white">Input</span> : {input}</p>
-        <p className="text-sm"> <span className="text-white">Output</span> : {output}</p>
+        <p className="text-sm">
+          {" "}
+          <span className="text-white">Input</span> : {input}
+        </p>
+        <p className="text-sm">
+          {" "}
+          <span className="text-white">Output</span> : {output}
+        </p>
 
         <Link
           href={`/our-services/${slug}`}

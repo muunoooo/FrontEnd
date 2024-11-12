@@ -29,7 +29,7 @@ export default function Staff() {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=7");
+        const response = await fetch("https://randomuser.me/api/?results=8");
         const data = await response.json();
 
         const fetchedMembers = data.results.map((user: User) => ({
@@ -53,17 +53,19 @@ export default function Staff() {
     <div className="p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {teamMembers.map((member, idx) => (
-          <div key={idx} className="card bg-black shadow-xl p-4">
-            <figure className="px-10 pt-10">
-              <Image
-                src={member.image}
-                alt={member.name}
-                className="rounded-xl w-full h-40 object-cover"
-              />
-            </figure>
+          <div key={idx} className="card h-[290px] w-auto bg-black shadow-xl p-4">
+              <figure className="px-10 pt-10">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={100}
+                  height={100}
+                  className="rounded-xl"
+                />
+              </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">{member.name}</h2>
-              <p>{member.position}</p>
+              <h2 className="card-title text-[#071e26] text-xl font-bold">{member.name}</h2>
+              <p className="font-bold">as {member.position}</p>
             </div>
           </div>
         ))}

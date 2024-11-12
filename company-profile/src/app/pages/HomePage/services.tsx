@@ -11,7 +11,7 @@ export default function Services() {
         <div className="text-center md:mt-10">
           <div>
             <Link
-              href={"/our-sevices"}
+              href={"/our-services"}
               className="text-2xl md:text-4xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out px-2 rounded-md"
             >
               What does{" "}

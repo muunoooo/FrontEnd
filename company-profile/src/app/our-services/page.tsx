@@ -7,7 +7,14 @@ export default async function servicesPage() {
   const data: IServices[] = await getServices();
 
   return (
-    <div>
+    <div
+      className="hero bg-base-100 min-h-screen"
+      style={{
+        backgroundImage: "url('/svg/waveAboutUs1.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Wrapper>
         <div className="flex flex-col justify-center items-center text-center">
           <div className="text-2xl font-bold mb-4">Our Services</div>

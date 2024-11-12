@@ -58,14 +58,15 @@ export default function Director() {
                 <Image
                   src={member.image}
                   alt="Director"
+                  width={100}
+                  height={100}
                   className="rounded-xl"
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">{member.name}</h2>
-                <p>Director</p>
+                <h2 className="card-title text-[#071e26] font-bold text-xl">{member.name}</h2>
+                <p> as Director</p>
                 <div className="card-actions">
-                  <button className="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
