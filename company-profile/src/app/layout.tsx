@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 
 export const oswald = Oswald({
   subsets: ["latin"],
+  weight: '400',
   display: "swap",
 });
 
