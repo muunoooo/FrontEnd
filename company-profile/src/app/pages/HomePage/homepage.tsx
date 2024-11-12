@@ -1,4 +1,4 @@
-import { oswald } from "@/app/layout";
+import { oswald } from "@/app/fonts";
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
 
@@ -26,12 +26,13 @@ export default function HomePage() {
             <div className="text-center lg:text-start">
               <div className={oswald.className}>
                 <p className="text-5xl text-white font-extrabold">
-                  PT. {" "}
-                <strong className="text-5xl text-[#2596be] font-extrabold md:text-[#45daf8]">
-                  GEOVASI
-                </strong>
+                  PT.{" "}
+                  <strong className="text-5xl text-[#2596be] font-extrabold md:text-[#45daf8]">
+                    GEOVASI
+                  </strong>
                 </p>
               </div>
+
               <h1 className="text-2xl font-bold md:text-4xl text-white">
                 Persada International
               </h1>

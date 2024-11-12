@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Wrapper from "./wrapper";
 
 interface ICardBlog {
   title: string;

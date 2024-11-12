@@ -20,7 +20,7 @@ export default function TeamSection() {
             strong foundation in geological engineering, remote sensing, and
             advanced software development, our team is equipped to tackle
             complex environmental challenges and deliver precise, actionable
-            insights. Each member is committed to upholding Geovasi's values of
+            insights. Each member is committed to upholding Geovasi&apos;s values of
             integrity, accuracy, and sustainable impact, ensuring that we meet
             and exceed the expectations of our clients in every project.
           </div>

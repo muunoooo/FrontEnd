@@ -16,13 +16,13 @@ export default function MemberPage() {
       <Wrapper>
         <div className="flex flex-col justify-center text-center pt-10 gap-5">
           <div className="text-xl text-white italic">
-            "<span className="text-[#45daf8]">We</span> focus on supporting your
+            <span className="text-[#45daf8]">We</span> focus on supporting your
             company with{" "}
             <span className="text-[#45daf8]">
               Geo-IT innovation, research, and sustainable technology
               development.
             </span>
-            "
+            
           </div>
           <div className="mt-10">
             <p className="text-xl">Our Associations Membership</p>

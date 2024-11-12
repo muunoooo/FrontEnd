@@ -13,8 +13,10 @@ export default async function servicesPage() {
           <div key={idx}>
             <Card
               title={item.fields.title}
-              image={item.fields.image.fields.file.url}
+              image={item.fields.thumbnail.fields.file.url}
               slug={item.fields.slug}
+              input={item.fields.input}
+              output={item.fields.output}
             />
           </div>
         );

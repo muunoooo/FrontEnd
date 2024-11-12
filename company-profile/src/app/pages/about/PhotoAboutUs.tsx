@@ -1,5 +1,4 @@
 import Wrapper from "@/components/wrapper";
-import Image from "next/image";
 import React from "react";
 
 export default function PhotoAboutUsPage() {

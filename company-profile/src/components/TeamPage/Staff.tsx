@@ -1,6 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
+interface User {
+  name: {
+    first: string;
+    last: string;
+  };
+  location: {
+    city: string;
+  };
+  picture: {
+    large: string;
+  };
+}
 
 interface TeamMember {
   name: string;
@@ -19,7 +32,7 @@ export default function Staff() {
         const response = await fetch("https://randomuser.me/api/?results=7");
         const data = await response.json();
 
-        const fetchedMembers = data.results.map((user: any) => ({
+        const fetchedMembers = data.results.map((user: User) => ({
           name: `${user.name.first} ${user.name.last}`,
           city: `${user.location.city} `,
           position: "Team Member",
@@ -42,7 +55,7 @@ export default function Staff() {
         {teamMembers.map((member, idx) => (
           <div key={idx} className="card bg-black shadow-xl p-4">
             <figure className="px-10 pt-10">
-              <img
+              <Image
                 src={member.image}
                 alt={member.name}
                 className="rounded-xl w-full h-40 object-cover"

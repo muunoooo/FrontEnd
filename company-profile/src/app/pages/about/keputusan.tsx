@@ -1,10 +1,9 @@
-import { oswald } from "@/app/layout";
+import { oswald } from "@/app/fonts"; // Import oswald correctly
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
 
 export default function HomePage() {
   return (
-    // master
     <div
       className="hero bg-base-100 min-h-screen"
       style={{
@@ -30,10 +29,10 @@ export default function HomePage() {
                 Persada International
               </h1>
               <p className="py-6 text-lg md:text-3xl">
-                Keputusan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia
-                NOMOR AHU-0038094.AH.01.01 TAHUN 2022 Tentang Pengesahan
-                Pendirian Badan Hukum Perseroan Terbatas PT Geovasi Persada
-                International
+                Keputusan Menteri Hukum dan Hak Asasi Manusia Republik
+                Indonesia NOMOR AHU-0038094.AH.01.01 TAHUN 2022 Tentang
+                Pengesahan Pendirian Badan Hukum Perseroan Terbatas PT
+                Geovasi Persada International
               </p>
               <p>
                 With <span className="italic">NOMOR AHU-0038094.AH.01.01</span>{" "}
