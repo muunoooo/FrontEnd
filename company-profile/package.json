@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.0.0",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.1.5",
+    "contentful": "^11.2.1",
+    "contentful-resolve-response": "^1.9.0",
     "next": "14.2.16",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5"
   },
   "devDependencies": {
+    "@types/contentful-resolve-response": "^0.1.33",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

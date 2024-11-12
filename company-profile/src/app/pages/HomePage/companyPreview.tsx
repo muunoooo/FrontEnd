@@ -14,13 +14,20 @@ export default function ComPreview() {
     >
       <Wrapper>
         {/* Top text */}
-        <div className="text-center mb-10 p-10">
+        <div className="text-center mb-10 p-10 items-center flex flex-col">
           <p className=" text-3xl md:text-4xl mb-10 md:mb-6">
             What Is{" "}
             <span className="text-[#2596be] font-bold italic text-4xl md:text-5xl">
               GEOVASI?
             </span>
           </p>
+          <Image
+            src={"/navbar/Logo Kecil.png"}
+            alt="GevoasiLogo"
+            width={200}
+            height={200}
+            className=" items-center w-44 h-auto"
+          />
           <p className="px-5 md:px-20 text-pretty text-lg md:text-xl">
             <span className="text-[#2596be] font-extrabold">Geovasi </span>is a
             <span className="text-[#c9fcfe]"> consultant mining</span> and
@@ -35,7 +42,7 @@ export default function ComPreview() {
               developing your mining plan smartly
             </span>
           </p>
-          <Link href={"/"}>
+          <Link href={"/about-us"}>
             <button className="btn bg-[#45daf8] text-black mt-10">About us</button>
           </Link>
 

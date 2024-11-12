@@ -1,14 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footbar() {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
-        <Link href={"/"}>About us</Link>
-        <Link href={"/"}>Contact</Link>
-        <Link href={"/"}>Jobs</Link>
-        <Link href={"/"}>Press kit</Link>
+        <Link href={"/about-us"}>About us</Link>
+        <Link
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRqrgMmsfVxMjlvktbkjKLJcnCpcndVvCbFWXlZTDzGKntBgrRcFtFRHGgkSsmrkWWDGV"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact
+        </Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
