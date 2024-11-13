@@ -41,6 +41,7 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
         <Link
           href={`/our-services/${slug}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-700 rounded-lg hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
+        aria-label="geovasi services slug"
         >
           Read more
         </Link>

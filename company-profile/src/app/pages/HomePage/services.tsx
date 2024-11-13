@@ -13,6 +13,7 @@ export default function Services() {
             <Link
               href={"/our-services"}
               className="text-2xl md:text-4xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out px-2 rounded-md"
+              aria-label="geovasi services"
             >
               What does{" "}
               <span className="text-4xl md:text-5xl text-[#2596be] font-extrabold hover:text-white">
@@ -50,7 +51,7 @@ export default function Services() {
               </h2>
             </div>
             <div>
-              <Link href={"/our-services"}>
+              <Link href={"/our-services"} aria-label="geovasi services">
                 <button className="btn bg-black text-[#45daf8]">
                   More Detail
                 </button>

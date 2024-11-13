@@ -42,7 +42,7 @@ export default function ComPreview() {
               developing your mining plan smartly
             </span>
           </p>
-          <Link href={"/about-us"}>
+          <Link href={"/about-us"} aria-label="geovasi about us">
             <button className="btn bg-[#45daf8] text-black mt-10">About us</button>
           </Link>
 

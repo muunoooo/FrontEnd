@@ -61,6 +61,7 @@ export default async function BlogDetail({
             <Link
               href={"/our-services"}
               className="fixed top-[100px] font-bold"
+              aria-label="geovasi services"
             >
               {" "}
               back to services
@@ -72,6 +73,7 @@ export default async function BlogDetail({
             <Link
               href={"/our-services"}
               className="sticky top-[100px] font-bold"
+              aria-label="geovasi services"
             >
               {" "}
               back home
@@ -93,7 +95,7 @@ export default async function BlogDetail({
             {documentToReactComponents(services.fields.ourServices, options)}
           </div>
           <div className="md:hidden">
-            <Link href={"/our-services"}>
+            <Link href={"/our-services"} aria-label="geovasi services">
               <button className="btn glass">Back To Services</button>
             </Link>
           </div>
