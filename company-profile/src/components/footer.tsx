@@ -19,6 +19,7 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="geovasi sosial"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -36,6 +37,7 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="geovasi sosial"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -57,6 +59,7 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="geovasi sosial"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -78,6 +81,7 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="geovasi sosial"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"

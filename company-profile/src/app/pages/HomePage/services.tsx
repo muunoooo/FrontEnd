@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <div
       className=" w-auto h-auto md:h-[400px] 
-    bg-[#071e26] flex flex-col justify-center"
+    bg-[#05141b] flex flex-col justify-center"
     >
       <Wrapper>
         <div className="text-center md:mt-10">

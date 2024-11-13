@@ -45,8 +45,8 @@ export default function HomePage() {
             <Image
               src={"/Home/Logo Kecil.png"}
               alt=""
-              height={1000}
-              width={1000}
+              height={600}
+              width={600}
               className="max-w-sm rounded-lg shadow-2xl"
             />
           </div>

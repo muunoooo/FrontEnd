@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 export default function Testimonial() {
   return (
-    <div className="bg-[#071e26] py-8 w-auto">
+    <div className="bg-[#05141b] py-8 w-auto">
       <p
         className="text-4xl md:text-4xl
        hover:text-white text-center my-10"

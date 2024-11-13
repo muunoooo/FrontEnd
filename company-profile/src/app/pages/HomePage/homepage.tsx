@@ -16,6 +16,7 @@ export default function HomePage() {
       <Wrapper>
         <div>
           <div className="hero-content flex-col lg:flex-row-reverse">
+            
             <Image
               src={"/Home/hero.jpg"}
               priority

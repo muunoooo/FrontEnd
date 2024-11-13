@@ -5,9 +5,7 @@ export default function PhotoAboutUsPage() {
   return (
     <div className="bg-black flex justify-center items-center">
       <Wrapper>
-        <div>
-            
-        </div>
+        <div></div>
       </Wrapper>
     </div>
   );
