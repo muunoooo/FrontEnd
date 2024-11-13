@@ -7,7 +7,6 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    // master
     <div
       className="hero bg-base-100 min-h-screen"
       style={{
@@ -19,18 +18,21 @@ export default function HomePage() {
       <Wrapper>
         <div>
           <div className="hero-content flex-col lg:flex-row-reverse">
-            <Image
-              src="/Home/hero.jpg"
-              alt="Geovasi"
-              priority
-              layout="responsive"
-              width={600}
-              height={600}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="rounded-lg shadow-2xl w-full max-w-md md:max-w-lg lg:max-w-xl"
-            />
+            <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl">
+              <Image
+                src="/Home/hero.jpg"
+                alt="Geovasi"
+                priority
+                layout="responsive"
+                width={600}
+                height={600}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="rounded-lg shadow-2xl w-full h-auto" 
+                style={{ objectFit: "cover" }} 
+              />
+            </div>
 
-            <div className="text-center lg:text-start">
+            <div className="text-center lg:text-start mt-8 lg:mt-0">
               <div className={oswald.className}>
                 <p className="text-5xl text-white font-extrabold">
                   PT.{" "}

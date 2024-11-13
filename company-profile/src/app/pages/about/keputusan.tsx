@@ -43,14 +43,18 @@ export default function HomePage() {
               </p>
             </div>
 
-            <Image
-              src="/Home/Logo Kecil.png"
-              alt="Geovasi Logo"
-              width={500}
-              height={500}
-              priority
-              className="w-full md:w-[500px] h-auto max-w-sm rounded-lg shadow-2xl"
-            />
+            <div className="relative w-full max-w-md">
+              <Image
+                src="/Home/Logo Kecil.png"
+                alt="Geovasi Logo"
+                width={500}
+                height={500}
+                priority
+                sizes="(max-width: 768px) 80vw, 500px"
+                className="w-full md:w-[500px] h-auto max-w-sm rounded-lg shadow-2xl"
+                style={{ objectFit: "contain" }}
+              />
+            </div>
           </div>
         </div>
       </Wrapper>

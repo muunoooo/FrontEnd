@@ -22,7 +22,7 @@ export default function Navbar() {
             alt="Geovasi Logo Small"
             width={200}
             height={40}
-            className="block md:hidden w-20 h-auto"
+            className="block md:hidden w-20 h-20 object-contain"
             aria-label="Geovasi Home Page"
           />
         </Link>

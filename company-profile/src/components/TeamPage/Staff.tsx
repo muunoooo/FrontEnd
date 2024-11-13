@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -56,9 +54,8 @@ export default function Staff() {
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
-            className="card h-[290px] w-auto bg-[#2c3e50] shadow-xl p-4 rounded-lg"
+            className="card h-[290px] w-auto bg-[#34495e] shadow-xl p-4 rounded-lg" 
           >
-            {" "}
             <figure className="px-10 pt-10">
               <Image
                 src={member.image}
@@ -70,11 +67,12 @@ export default function Staff() {
               />
             </figure>
             <div className="card-body items-center text-center text-white">
-              {" "}
-              <h2 className="card-title text-[#3498db] text-xl font-bold">
+              <h2 className="card-title text-[#ecf0f1] text-xl font-bold"> 
                 {member.name}
-              </h2>{" "}
-              <p className="font-bold">as {member.position}</p>
+              </h2>
+              <p className="font-bold text-[#ecf0f1]"> 
+                as {member.position}
+              </p>
             </div>
           </div>
         ))}
