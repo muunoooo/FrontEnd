@@ -25,30 +25,34 @@ export default function Services() {
 
           <div className="flex flex-col md:flex-row gap-2 justify-center items-center mt-4 text-[#071e26]">
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-center md:h-[90px]">ERT Survey</h2>
+              <p className="card-title text-center md:h-[90px] text-black">
+                ERT Survey
+              </p>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-center md:h-[90px]">GPR Survey</h2>
+              <p className="card-title text-center md:h-[90px] text-black">
+                GPR Survey
+              </p>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-start md:text-center md:h-[90px]">
+              <p className="card-title text-start md:text-center md:h-[90px] text-black te">
                 Aerial Mapping (sUAV/Drone)
-              </h2>
+              </p>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105 md:w-auto">
-              <h2 className="card-title text-start md:text-center md:h-[90px]">
-                <p>Web & Mobile Applications (Dashboard)</p>
-              </h2>
+              <p className="card-title text-start md:text-center md:h-[90px] text-black">
+                Web & Mobile Applications (Dashboard)
+              </p>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-center md:h-[90px]">
-                <p>Tracking Process</p>
-              </h2>
+              <p className="card-title text-center md:h-[90px] text-black">
+                Tracking Process
+              </p>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-center md:h-[90px]">
-                <p>Telemetry</p>
-              </h2>
+              <p className="card-title text-center md:h-[90px] text-black">
+                Telemetry
+              </p>
             </div>
             <div>
               <Link href={"/our-services"} aria-label="geovasi services">

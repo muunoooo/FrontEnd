@@ -2,13 +2,20 @@ import Link from "next/link";
 
 export default function Footbar() {
   return (
-    <footer className="footer footer-center bg-base-200 rounded p-10 text-white">
+    <footer className="footer footer-center bg-black rounded p-10 text-white">
       <nav className="grid grid-flow-col gap-4">
-        <Link href={"/about-us"}>About us</Link>
+        <Link
+          href={"/about-us"}
+          aria-label="geovasi about us"
+          className="text-white"
+        >
+          About us
+        </Link>
         <Link
           href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRqrgMmsfVxMjlvktbkjKLJcnCpcndVvCbFWXlZTDzGKntBgrRcFtFRHGgkSsmrkWWDGV"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-white"
           aria-label="Mail"
         >
           Contact
@@ -105,7 +112,7 @@ export default function Footbar() {
       </nav>
       <aside>
         <p>
-          PT <span className="text-[#2596be]">GEOVASI</span> INTERNATIONAL
+          PT <span className="text-[#44B0DA]">GEOVASI</span> INTERNATIONAL
           PERSADA -<span className="text-[#c9fcfe]"> Lifetime </span>
           Consultation Guarantee
         </p>
