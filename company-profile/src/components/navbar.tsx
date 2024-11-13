@@ -5,7 +5,6 @@ export default function Navbar() {
   return (
     <div className="navbar bg-gray-800">
       <div className="flex-1">
-        {/* Large logo - hidden on small screens */}
         <Link href={"/"} aria-label="about geovasi">
           <Image
             src={"/navbar/logo.png"}
@@ -13,10 +12,8 @@ export default function Navbar() {
             width={200}
             height={40}
             className="hidden md:block w-28 md:w-48 lg:w-52 md:pl-5"
-            aria-label="geovasi home"
           />
         </Link>
-        {/* Small logo - visible on small screens only */}
         <Link href={"/"}>
           <Image
             src={"/navbar/Logo Kecil.png"}

@@ -9,6 +9,7 @@ export default function Footbar() {
           href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRqrgMmsfVxMjlvktbkjKLJcnCpcndVvCbFWXlZTDzGKntBgrRcFtFRHGgkSsmrkWWDGV"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Mail"
         >
           Contact
         </Link>
