@@ -7,7 +7,7 @@ export default function Testi() {
     <div className="bg-[#071e26] py-12">
       <Wrapper>
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold ">What Our Clients Say</h2>
+          <h2 className="text-3xl font-bold ">What <span className="text-[#2596be]">Our</span> Clients Say</h2>
           <p className="">Testimonials from valued partners and clients</p>
         </div>
         <div className="flex flex-row justify-center gap-8">
@@ -23,7 +23,7 @@ export default function Testi() {
                 />
               </figure>
               <div className="text-center mt-4">
-                <h3 className="text-xl font-semibold text-gray-800">Muno</h3>
+                <h3 className="text-xl font-semibold text-white">Mr. Muno</h3>
                 <p className="text-sm text-[#2596be]">CEO, PT. Muno</p>
                 <p className="mt-4 text-gray-700">
                   &quot;Working with PT{" "}
@@ -46,7 +46,7 @@ export default function Testi() {
                 />
               </figure>
               <div className="text-center mt-4">
-                <h3 className="text-xl font-semibold text-gray-800">James</h3>
+                <h3 className="text-xl font-semibold text-white">Mr. James</h3>
                 <p className="text-sm text-[#2596be]">CEO, PT. Banana</p>
                 <p className="mt-4 text-gray-700">
                   &quot;The team at PT{" "}
