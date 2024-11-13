@@ -6,7 +6,7 @@ export default function Navbar() {
     <div className="navbar bg-gray-800">
       <div className="flex-1">
         {/* Large logo - hidden on small screens */}
-        <Link href={"/"}>
+        <Link href={"/"} aria-label="about geovasi">
           <Image
             src={"/navbar/logo.png"}
             alt="GevoasiLogo"
