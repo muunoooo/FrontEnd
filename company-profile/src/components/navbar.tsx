@@ -5,24 +5,25 @@ export default function Navbar() {
   return (
     <div className="navbar bg-gray-800">
       <div className="flex-1">
-        <Link href={"/"} aria-label="about geovasi">
+        <Link href={"/"} aria-label="Go to Geovasi Home Page">
           <Image
             src={"/navbar/logo.png"}
-            alt="GevoasiLogo"
+            alt="Geovasi Logo"
             width={200}
             height={40}
             className="hidden md:block w-28 md:w-48 lg:w-52 md:pl-5"
-            aria-label="geovasi home"
+            aria-label="Geovasi Home Page"
           />
         </Link>
-        <Link href={"/"}>
+
+        <Link href={"/"} aria-label="Go to Geovasi Home Page">
           <Image
             src={"/navbar/Logo Kecil.png"}
-            alt="GevoasiLogo"
+            alt="Geovasi Logo Small"
             width={200}
             height={40}
             className="block md:hidden w-20 h-auto"
-             aria-label="geovasi home"
+            aria-label="Geovasi Home Page"
           />
         </Link>
       </div>
@@ -32,7 +33,7 @@ export default function Navbar() {
             <Link
               href={"/"}
               className="px-2 sm:px-3 md:px-4 lg:text-lg font-bold"
-               aria-label="geovasi home"
+              aria-label="Go to Geovasi Home Page"
             >
               Home
             </Link>
@@ -41,7 +42,7 @@ export default function Navbar() {
             <Link
               href={"/about-us"}
               className="px-2 sm:px-3 md:px-4 lg:text-lg font-bold"
-               aria-label="geovasi about us"
+              aria-label="Go to Geovasi About Us Page"
             >
               About Us
             </Link>
@@ -50,7 +51,7 @@ export default function Navbar() {
             <Link
               href={"/our-services"}
               className="px-2 sm:px-3 md:px-4 lg:text-lg font-bold"
-               aria-label="geovasi services"
+              aria-label="Go to Geovasi Our Services Page"
             >
               Our Services
             </Link>
@@ -59,9 +60,9 @@ export default function Navbar() {
             <Link
               href={"/our-team"}
               className="px-2 sm:px-3 md:px-4 lg:text-lg font-bold"
-               aria-label="geovasi team"
+              aria-label="Go to Geovasi Our Team Page"
             >
-              Our Teams
+              Our Team
             </Link>
           </li>
         </ul>

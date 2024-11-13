@@ -54,7 +54,11 @@ export default function Staff() {
     <div className="p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {teamMembers.map((member, idx) => (
-          <div key={idx} className="card h-[290px] w-auto bg-[#2c3e50] shadow-xl p-4 rounded-lg"> {/* Lighter background for contrast */}
+          <div
+            key={idx}
+            className="card h-[290px] w-auto bg-[#2c3e50] shadow-xl p-4 rounded-lg"
+          >
+            {" "}
             <figure className="px-10 pt-10">
               <Image
                 src={member.image}
@@ -62,10 +66,14 @@ export default function Staff() {
                 width={100}
                 height={100}
                 className="rounded-xl"
+                priority
               />
             </figure>
-            <div className="card-body items-center text-center text-white"> {/* White text for good contrast */}
-              <h2 className="card-title text-[#3498db] text-xl font-bold">{member.name}</h2> {/* Blue text color */}
+            <div className="card-body items-center text-center text-white">
+              {" "}
+              <h2 className="card-title text-[#3498db] text-xl font-bold">
+                {member.name}
+              </h2>{" "}
               <p className="font-bold">as {member.position}</p>
             </div>
           </div>

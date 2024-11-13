@@ -8,10 +8,10 @@ export default function Testimonial() {
   return (
     <div className="bg-[#05141b] py-8 w-auto">
       <p
-        className="text-4xl md:text-4xl
-       hover:text-white text-center my-10"
+        className="text-4xl md:text-4xl hover:text-white text-center my-10 text-white"
       >
-        Our <span className="md:text-5xl text-[#2596be] font-bold">Client </span>
+        Our{" "}
+        <span className="md:text-5xl text-[#2596be] font-bold">Client </span>
       </p>
       <Wrapper>
         <Marquee speed={60} gradient={false}>

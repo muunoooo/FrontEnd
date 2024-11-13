@@ -6,7 +6,7 @@ export default function Footbar() {
       <nav className="grid grid-flow-col gap-4">
         <Link
           href={"/about-us"}
-          aria-label="geovasi about us"
+          aria-label="Geovasi About Us"
           className="text-white"
         >
           About us
@@ -15,8 +15,8 @@ export default function Footbar() {
           href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRqrgMmsfVxMjlvktbkjKLJcnCpcndVvCbFWXlZTDzGKntBgrRcFtFRHGgkSsmrkWWDGV"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Contact Geovasi via Email"
           className="text-white"
-          aria-label="Mail"
         >
           Contact
         </Link>
@@ -27,7 +27,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Instagram"
+            title="Visit Geovasi Instagram"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -45,7 +46,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Twitter"
+            title="Visit Geovasi Twitter"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -67,7 +69,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Facebook"
+            title="Visit Geovasi Facebook"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -89,7 +92,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi LinkedIn"
+            title="Visit Geovasi LinkedIn"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"

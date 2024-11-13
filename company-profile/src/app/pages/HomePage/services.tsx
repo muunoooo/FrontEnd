@@ -13,7 +13,7 @@ export default function Services() {
             <Link
               href={"/our-services"}
               className="text-2xl md:text-4xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out px-2 rounded-md"
-              aria-label="geovasi services"
+              aria-label="Geovasi services overview"
             >
               What does{" "}
               <span className="text-4xl md:text-5xl text-[#2596be] font-extrabold hover:text-white">
@@ -25,7 +25,8 @@ export default function Services() {
 
           <div className="flex flex-col md:flex-row gap-2 justify-center items-center mt-4 text-[#05141b]">
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <p className="card-title text-center md:h-[90px] text-[#05141b] font-bold">
+              <p className="card-title text-center md:h-[90px] text-[#071e26] font-bold">
+                {" "}
                 ERT Survey
               </p>
             </div>
@@ -57,6 +58,7 @@ export default function Services() {
             <div>
               <Link href={"/our-services"} aria-label="geovasi services">
                 <button className="btn bg-black text-white hover:bg-[#2596be]">
+                  {" "}
                   More Detail
                 </button>
               </Link>

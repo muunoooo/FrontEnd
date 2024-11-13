@@ -17,13 +17,15 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
           className="rounded-t-lg object-cover"
           src={`https:${image}`}
           alt={title}
-          width={200}
-          height={200}
+          width={200} 
+          height={200} 
+          sizes="(max-width: 768px) 100vw, 200px" 
           priority
+          fetchPriority="high" 
         />
       </div>
       <div className="p-4">
-        <h5 className="mb-2 text-lg font-extrabold tracking-tight text-[#2596be] line-clamp-1">
+        <h5 className="mb-2 text-lg font-extrabold tracking-tight text-[#009c9b] line-clamp-1">
           {title}
         </h5>
         <p className="text-sm">
