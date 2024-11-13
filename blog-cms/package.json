@@ -18,6 +18,7 @@
     "@nextui-org/card": "^2.0.34",
     "@nextui-org/system": "^2.2.6",
     "@nextui-org/theme": "^2.2.11",
+    "@supabase/supabase-js": "^2.46.1",
     "contentful-resolve-response": "^1.9.0",
     "framer-motion": "^11.11.11",
     "next": "14.2.16",

@@ -1,0 +1,18 @@
+import supabase from "@/services/supabase";
+
+export const signInWithGoogle = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      queryParams: {
+        access_type: "offline",
+        prompt: "consent",
+      },
+    },
+  });
+  
+
+  if (error) {
+    console.log("Error during Google sign-in:", error.message);
+  }
+};
