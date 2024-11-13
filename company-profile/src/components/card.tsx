@@ -26,7 +26,7 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
         />
       </div>
       <div className="p-4">
-        <h5 className="mb-2 text-md font-bold tracking-tight text-black dark:text-white line-clamp-1">
+        <h5 className="mb-2 text-lg font-extrabold tracking-tight text-[#2596be] line-clamp-1">
           {title}
         </h5>
         <p className="text-sm">

@@ -18,8 +18,8 @@ export default function HomePage() {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <Image
               src={"/Home/hero.jpg"}
-              alt=""
               priority
+              alt="Geovasi"
               height={1000}
               width={1000}
               className="max-w-sm rounded-lg shadow-2xl"

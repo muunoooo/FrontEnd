@@ -24,7 +24,7 @@ export default function Testi() {
               </figure>
               <div className="text-center mt-4">
                 <h3 className="text-xl font-semibold text-gray-800">Muno</h3>
-                <p className="text-sm text-gray-500">CEO, PT. Muno</p>
+                <p className="text-sm text-[#2596be]">CEO, PT. Muno</p>
                 <p className="mt-4 text-gray-700">
                   &quot;Working with PT{" "}
                   <span className="text-[#2596be]">Geovasi</span> has been
@@ -38,7 +38,7 @@ export default function Testi() {
             <div className="card bg-black max-w-sm shadow-lg rounded-lg p-6">
               <figure className="flex justify-center items-center">
                 <Image
-                  src={"/Foto/onum1.jpg"}
+                  src={"/Foto/onum2.JPG"}
                   alt="Muno, CEO of PT.Muno"
                   height={150}
                   width={150}
@@ -46,13 +46,14 @@ export default function Testi() {
                 />
               </figure>
               <div className="text-center mt-4">
-                <h3 className="text-xl font-semibold text-gray-800">Muno</h3>
-                <p className="text-sm text-gray-500">CEO, PT. Muno</p>
+                <h3 className="text-xl font-semibold text-gray-800">James</h3>
+                <p className="text-sm text-[#2596be]">CEO, PT. Banana</p>
                 <p className="mt-4 text-gray-700">
-                  &quot;Working with PT{" "}
-                  <span className="text-[#2596be]">Geovasi</span> has been
-                  instrumental to our success. Their expertise and commitment to
-                  quality set them apart.&quot;
+                  &quot;The team at PT{" "}
+                  <span className="text-[#2596be]">Geovasi</span> brought
+                  expertise and commitment that exceeded our expectations. They
+                  understand our industry needs thoroughly and deliver results
+                  consistently.&quot;
                 </p>
               </div>
             </div>
