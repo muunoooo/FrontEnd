@@ -19,6 +19,7 @@ export default function HomePage() {
             <Image
               src={"/Home/hero.jpg"}
               alt=""
+              priority
               height={1000}
               width={1000}
               className="max-w-sm rounded-lg shadow-2xl"
