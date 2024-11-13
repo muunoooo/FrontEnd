@@ -36,16 +36,18 @@ export default function Services() {
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105 md:w-auto">
               <h2 className="card-title text-start md:text-center md:h-[90px]">
-                Web & Mobile Applications (Dashboard)
+                <p>Web & Mobile Applications (Dashboard)</p>
               </h2>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
               <h2 className="card-title text-center md:h-[90px]">
-                Tracking Process
+                <p>Tracking Process</p>
               </h2>
             </div>
             <div className="card-body card bg-[#45daf8] w-72 hover:scale-105">
-              <h2 className="card-title text-center md:h-[90px]">Telemetry</h2>
+              <h2 className="card-title text-center md:h-[90px]">
+                <p>Telemetry</p>
+              </h2>
             </div>
             <div>
               <Link href={"/our-services"}>
