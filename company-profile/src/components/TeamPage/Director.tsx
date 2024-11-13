@@ -3,19 +3,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-interface User {
-  name: {
-    first: string;
-    last: string;
-  };
-  location: {
-    city: string;
-  };
-  picture: {
-    large: string;
-  };
-}
-
 interface TeamMember {
   name: string;
   position: string;
@@ -30,7 +17,6 @@ export default function Director() {
   useEffect(() => {
     const fetchDirector = async () => {
       try {
-        // Fetch the Director's data
         const response = await fetch("https://randomuser.me/api/?results=1");
         const data = await response.json();
 
