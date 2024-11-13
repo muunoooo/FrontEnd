@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+
 interface User {
   name: {
     first: string;
@@ -53,18 +54,18 @@ export default function Staff() {
     <div className="p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {teamMembers.map((member, idx) => (
-          <div key={idx} className="card h-[290px] w-auto bg-black shadow-xl p-4">
-              <figure className="px-10 pt-10">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={100}
-                  height={100}
-                  className="rounded-xl"
-                />
-              </figure>
-            <div className="card-body items-center text-center">
-              <h2 className="card-title text-[#071e26] text-xl font-bold">{member.name}</h2>
+          <div key={idx} className="card h-[290px] w-auto bg-[#2c3e50] shadow-xl p-4 rounded-lg"> {/* Lighter background for contrast */}
+            <figure className="px-10 pt-10">
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={100}
+                height={100}
+                className="rounded-xl"
+              />
+            </figure>
+            <div className="card-body items-center text-center text-white"> {/* White text for good contrast */}
+              <h2 className="card-title text-[#3498db] text-xl font-bold">{member.name}</h2> {/* Blue text color */}
               <p className="font-bold">as {member.position}</p>
             </div>
           </div>

@@ -1,4 +1,7 @@
-import { oswald } from "@/app/fonts";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({ weight: "400", subsets: ["latin"], display: "swap" });
+
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
 
@@ -16,14 +19,15 @@ export default function HomePage() {
       <Wrapper>
         <div>
           <div className="hero-content flex-col lg:flex-row-reverse">
-            
             <Image
-              src={"/Home/hero.jpg"}
-              priority
+              src="/Home/hero.jpg"
               alt="Geovasi"
-              height={600}
+              priority
+              layout="responsive"
               width={600}
-              className="w-[300px] h-[420px] md:h-[600px] md:w-[600px] max-w-full rounded-lg shadow-2xl"
+              height={600}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="rounded-lg shadow-2xl w-full max-w-md md:max-w-lg lg:max-w-xl"
             />
 
             <div className="text-center lg:text-start">

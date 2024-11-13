@@ -1,4 +1,4 @@
-import { oswald } from "@/app/fonts"; // Import oswald correctly
+import { oswald } from "@/app/fonts";
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
 
@@ -38,16 +38,18 @@ export default function HomePage() {
                 With <span className="italic">NOMOR AHU-0038094.AH.01.01</span>{" "}
                 <br />
                 <span className="text-[#2596be] font-bold">Geovasi</span> was
-                officialty operated since{" "}
+                officially operated since{" "}
                 <span className="font-bold text-white">June 2022</span>
               </p>
             </div>
+
             <Image
-              src={"/Home/Logo Kecil.png"}
-              alt=""
-              height={600}
-              width={600}
-              className="max-w-sm rounded-lg shadow-2xl"
+              src="/Home/Logo Kecil.png"
+              alt="Geovasi Logo"
+              width={500}
+              height={500}
+              priority
+              className="w-full md:w-[500px] h-auto max-w-sm rounded-lg shadow-2xl"
             />
           </div>
         </div>

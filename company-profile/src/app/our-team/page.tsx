@@ -6,13 +6,13 @@ import Wrapper from "@/components/wrapper";
 
 export default function TeamSection() {
   return (
-    <div className=" mx-2">
+    <div className="mx-2 bg-black text-white"> {/* Black background with white text for good contrast */}
       <Wrapper>
         <div className="flex flex-col gap-5 justify-center items-center text-center">
-          <div className="text-3xl md:text-4xl mt-7">
-            Our <span className="text-[#45daf8]">Team</span>
+          <div className="text-3xl md:text-4xl mt-7 text-[#45daf8]">
+            Our <span className="text-[#2596be]">Team</span>
           </div>
-          <div className=" flex flex-col gap-5 text-lg md:text-xl">
+          <div className="flex flex-col gap-5 text-lg md:text-xl">
             <p>
               At <span className="text-[#45daf8]">Geovasi</span>, our team of
               dedicated experts brings together a unique blend of skills and
@@ -37,7 +37,7 @@ export default function TeamSection() {
             </p>
             <p>
               With a strong foundation in{" "}
-              <span className="text-[#2596be]">geological engineering</span>,{" "}
+              <span className="text-[#2596be]">geological engineering</span>,
               <span className="text-[#2596be]">remote sensing</span>, and{" "}
               <span className="text-[#2596be]">
                 advanced software development
