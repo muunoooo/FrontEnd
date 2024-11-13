@@ -27,6 +27,7 @@ export default function ComPreview() {
             width={200}
             height={200}
             className=" items-center w-44 h-auto"
+            aria-label="geovasi home"
           />
           <p className="px-5 md:px-20 text-pretty text-lg md:text-xl">
             <span className="text-[#2596be] font-extrabold">Geovasi </span>is a
@@ -43,9 +44,10 @@ export default function ComPreview() {
             </span>
           </p>
           <Link href={"/about-us"} aria-label="geovasi about us">
-            <button className="btn bg-[#45daf8] text-black mt-10">About us</button>
+            <button className="btn bg-[#45daf8] text-black mt-10">
+              About us
+            </button>
           </Link>
-
         </div>
 
         {/* Image row with centered middle image */}

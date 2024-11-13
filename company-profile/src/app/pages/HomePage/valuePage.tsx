@@ -6,14 +6,12 @@ export default function ValuePage() {
       <Wrapper>
         <div className="text-center">
           <div>
-            <h5 className="text-3xl md:text-4xl md:mt-16 mb-6 text-white">
-              <p>
-                Our Value <br />
-                <span className="text-4xl md:text-5xl text-[#4aa7d3] font-extrabold">
-                  Proposition!
-                </span>
-              </p>
-            </h5>
+            <p className="text-3xl md:text-4xl md:mt-16 mb-6 text-white">
+              Our Value <br />
+              <span className="text-4xl md:text-5xl text-[#4aa7d3] font-extrabold">
+                Proposition!
+              </span>
+            </p>
           </div>
           <div className="text-start pl-7 flex flex-col gap-3">
             <h3 className="text-2xl md:text-3xl text-[#c2f0fa] font-extrabold">

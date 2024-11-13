@@ -12,6 +12,7 @@ export default function Navbar() {
             width={200}
             height={40}
             className="hidden md:block w-28 md:w-48 lg:w-52 md:pl-5"
+            aria-label="geovasi home"
           />
         </Link>
         <Link href={"/"}>
