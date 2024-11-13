@@ -20,10 +20,11 @@ export default function HomePage() {
               src={"/Home/hero.jpg"}
               priority
               alt="Geovasi"
-              height={1000}
-              width={1000}
-              className="max-w-sm rounded-lg shadow-2xl"
+              height={100}
+              width={100}
+              className="w-[300px] h-[420px] md:h-[600px] md:w-[600px] max-w-full rounded-lg shadow-2xl"
             />
+
             <div className="text-center lg:text-start">
               <div className={oswald.className}>
                 <p className="text-5xl text-white font-extrabold">

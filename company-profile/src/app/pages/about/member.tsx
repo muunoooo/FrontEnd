@@ -14,7 +14,7 @@ export default function MemberPage() {
       }}
     >
       <Wrapper>
-        <div className="flex flex-col justify-center text-center pt-10 gap-5">
+        <div className="flex flex-col justify-center text-center pt-10 gap-5 mx-5">
           <div className="text-xl text-white italic">
             <span className="text-[#45daf8]">We</span> focus on supporting your
             company with{" "}
@@ -22,10 +22,13 @@ export default function MemberPage() {
               Geo-IT innovation, research, and sustainable technology
               development.
             </span>
-            
           </div>
           <div className="mt-10">
-            <p className="text-xl">Our Associations Membership</p>
+            <p className="text-3xl">
+              {" "}
+              <span className="text-[#45daf8]">Our</span> Associations
+              Membership
+            </p>
             <div className="flex justify-center mt-10 gap-5">
               <Link
                 href="https://www.hagi.or.id/"
@@ -38,6 +41,7 @@ export default function MemberPage() {
                   width={180}
                   height={180}
                   priority
+                  className="w-[130px]"
                 />
               </Link>
               <Link
@@ -51,6 +55,7 @@ export default function MemberPage() {
                   width={180}
                   height={180}
                   priority
+                  className="w-[130px]"
                 />
               </Link>
             </div>
