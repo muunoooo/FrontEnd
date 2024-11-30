@@ -1,10 +1,11 @@
 "use client";
 
+import action from "@/app/action";
 import { Field, Form, Formik, FormikProps } from "formik";
 import * as Yup from "yup";
 
 const RegisterSchema = Yup.object().shape({
-  username: Yup.string().required("username is required"),
+  name: Yup.string().required("name is required"),
   email: Yup.string()
     .email("invalid email format")
     .required("email is required"),
@@ -14,20 +15,22 @@ const RegisterSchema = Yup.object().shape({
 });
 
 interface FormValues {
-  username: string;
+  name: string;
   email: string;
   password: string;
 }
 
 function FormRegister() {
-  const initialValue: FormValues = { username: "", email: "", password: "" };
+  const initialValue: FormValues = { name: "", email: "", password: "" };
 
   const handleAdd = async (user: FormValues) => {
     try {
-      await fetch("http://localhost:2000/users", {
+      await fetch("http://localhost:8000/api/users", {
         method: "POST",
+        headers: { "content-type": "application/json" },
         body: JSON.stringify(user),
-      });   
+      });
+      action("users")
       alert("user berhasil ditambah!");
     } catch (err) {
       console.log(err);
@@ -52,23 +55,21 @@ function FormRegister() {
               <Form className="flex flex-col gap-2 min-w-[400px]">
                 <div className="mb-2">
                   <label
-                    htmlFor="username"
+                    htmlFor="name"
                     className="block mb-2 text-sm font-medium text-white"
                   >
-                    Username :
+                    Name :
                   </label>
                   <Field
                     type="text"
-                    name="username"
+                    name="name"
                     onChange={handleChange}
-                    value={values.username}
+                    value={values.name}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Username"
+                    placeholder="Name"
                   />
-                  {touched.username && errors.username ? (
-                    <div className="text-red-500 text-xs">
-                      {errors.username}
-                    </div>
+                  {touched.name && errors.name ? (
+                    <div className="text-red-500 text-xs">{errors.name}</div>
                   ) : null}
                 </div>
                 <div className="mb-2">

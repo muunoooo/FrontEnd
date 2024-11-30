@@ -7,7 +7,7 @@ export default function UserPageClient () {
     const [user, setUser] = useState<IUser[]>([])
     const getData = async () => {
         try {
-            const res = await fetch("http://localhost:2000/users")
+            const res = await fetch("http://localhost:8000/api/users")
             const data = await res.json
         } catch (error) {
             console.log(error)
