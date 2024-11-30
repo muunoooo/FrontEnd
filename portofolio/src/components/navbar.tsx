@@ -1,37 +1,37 @@
-"use client";
+// components/Navbar.js
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 5) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollActive = scroll
-    ? "py-[10px] h-[40px] bg-white text-black shadow"
-    : "py-4 bg-[#006A67] text-white";
   return (
-    <div
-      className={`navbar w-screen h-[60px] 
-        fixed z-50 justify-between px-4 sm:px-20 box-border transition-all duration-300 ${scrollActive}`}
-    >
-      <div className="flex flex-1 justify-center gap-10 mr-12">
-
-        <Link href="/" className=" hover:underline hover:scale-105">Landing</Link>
-        <Link href="/about" className=" hover:underline hover:scale-105">About</Link>
-        <Link href="/education" className=" hover:underline hover:scale-105">Education</Link>
+    <div className="navbar bg-[#FFFC9B] text-black px-5">
+      <div className="flex-1 px-2 lg:flex-none">
+        <Link href={"/"} className="text-lg font-bold">
+          Portofolio
+        </Link>
+      </div>
+      <div className="flex flex-1 justify-end px-2">
+        <div className="flex items-stretch">
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost rounded-btn"
+            >
+              Click me
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content bg-[#FFFC9B] rounded-box z-[1] mt-4 w-52 p-2 shadow"
+            >
+              <li>
+                {/* This link will now scroll to the About section */}
+                <Link href="#home">Home</Link>
+                <Link href="#about">About Me</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
