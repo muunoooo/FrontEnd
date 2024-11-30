@@ -34,7 +34,7 @@ export default function MemberPage() {
                 href="https://www.hagi.or.id/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="hagi"
+                aria-label="Visit Hagi website"
               >
                 <Image
                   src="/About/Hagi2.png"
@@ -49,7 +49,7 @@ export default function MemberPage() {
                 href="https://www.iagi.or.id/new/system/index.php"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="iagi"
+                aria-label="Visit IAGI website"
               >
                 <Image
                   src="/About/IAGI.png"

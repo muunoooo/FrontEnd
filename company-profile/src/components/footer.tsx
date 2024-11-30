@@ -2,14 +2,21 @@ import Link from "next/link";
 
 export default function Footbar() {
   return (
-    <footer className="footer footer-center bg-base-200 rounded p-10 text-white">
+    <footer className="footer footer-center bg-black rounded p-10 text-white">
       <nav className="grid grid-flow-col gap-4">
-        <Link href={"/about-us"}>About us</Link>
+        <Link
+          href={"/about-us"}
+          aria-label="Geovasi About Us"
+          className="text-white"
+        >
+          About us
+        </Link>
         <Link
           href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRqrgMmsfVxMjlvktbkjKLJcnCpcndVvCbFWXlZTDzGKntBgrRcFtFRHGgkSsmrkWWDGV"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Mail"
+          aria-label="Contact Geovasi via Email"
+          className="text-white"
         >
           Contact
         </Link>
@@ -20,7 +27,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Instagram"
+            title="Visit Geovasi Instagram"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -38,7 +46,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Twitter"
+            title="Visit Geovasi Twitter"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -60,7 +69,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi Facebook"
+            title="Visit Geovasi Facebook"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -82,7 +92,8 @@ export default function Footbar() {
             href={"https://www.instagram.com/geovasi.id/"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="geovasi sosial"
+            aria-label="Geovasi LinkedIn"
+            title="Visit Geovasi LinkedIn"
           >
             <svg
               className="w-[34px] h-[34px] text-gray-800 dark:text-white"
@@ -105,7 +116,7 @@ export default function Footbar() {
       </nav>
       <aside>
         <p>
-          PT <span className="text-[#2596be]">GEOVASI</span> INTERNATIONAL
+          PT <span className="text-[#44B0DA]">GEOVASI</span> INTERNATIONAL
           PERSADA -<span className="text-[#c9fcfe]"> Lifetime </span>
           Consultation Guarantee
         </p>

@@ -2,18 +2,6 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-interface User {
-  name: {
-    first: string;
-    last: string;
-  };
-  location: {
-    city: string;
-  };
-  picture: {
-    large: string;
-  };
-}
 
 interface TeamMember {
   name: string;
@@ -24,55 +12,62 @@ interface TeamMember {
 }
 
 export default function Director() {
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [director, setDirector] = useState<TeamMember | null>(null);
 
   useEffect(() => {
-    const fetchTeamMembers = async () => {
+    const fetchDirector = async () => {
       try {
         const response = await fetch("https://randomuser.me/api/?results=1");
         const data = await response.json();
 
-        const fetchedMembers = data.results.map((user: User) => ({
-          name: `${user.name.first} ${user.name.last}`,
-          city: `${user.location.city} `,
+        const fetchedDirector = {
+          name: `${data.results[0].name.first} ${data.results[0].name.last}`,
           position: "Director",
-          description: `${user.name.first} is a dedicated team member contributing to our project.`,
-          image: user.picture.large,
-        }));
-
-        setTeamMembers(fetchedMembers);
+          city: data.results[0].location.city,
+          description: `${data.results[0].name.first} is the leader of our team.`,
+          image: data.results[0].picture.large,
+        };
+        setDirector(fetchedDirector);
       } catch (error) {
-        console.error("Failed to fetch team members:", error);
+        console.error("Failed to fetch director:", error);
       }
     };
 
-    fetchTeamMembers();
+    fetchDirector();
   }, []);
+
   return (
-    <div>
-      <div>
-        {teamMembers.map((member, idx) => (
-          <div key={idx} className="">
-            <div className="card bg-white  shadow-xl">
-              <figure className="px-10 pt-10">
-                <Image
-                  src={member.image}
-                  alt="Director"
-                  width={100}
-                  height={100}
-                  className="rounded-xl"
-                />
-              </figure>
-              <div className="card-body items-center text-center">
-                <h2 className="card-title text-[#071e26] font-bold text-xl">{member.name}</h2>
-                <p> as Director</p>
-                <div className="card-actions">
-                </div>
-              </div>
+    <div className="p-4">
+      <div className="mb-10 text-center">
+        <h2 className="text-4xl font-bold text-[#3498db]">Meet Our Director</h2>
+        <p className="text-lg mt-4">
+          Leading Geovasi with innovation and expertise
+        </p>
+      </div>
+
+      {/* Director Card */}
+      {director && (
+        <div className="mb-12">
+          <div className="card bg-[#34495e] shadow-xl p-8 rounded-lg">
+            <figure className="px-10 pt-10">
+              <Image
+                src={director.image}
+                alt="Director"
+                width={120}
+                height={120}
+                className="rounded-xl border-4 border-[#3498db]"
+              />
+            </figure>
+            <div className="card-body items-center text-center text-white">
+              <h2 className="card-title text-[#3498db] font-bold text-2xl">
+                {director.name}
+              </h2>
+              <p className="text-xl font-semibold">as {director.position}</p>
+              <p className="mt-4">{director.description}</p>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
