@@ -7,7 +7,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
       <Marquee speed={60} gradient={false} pauseOnHover={true}>
         <div className="carousel-item">
           <Image
-            src={"/education/onum1.jpg"}
+            src={"/Education/onum1.jpg"}
             alt="Image 1"
             width={150}
             height={300}
@@ -16,7 +16,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum2.jpg"}
+            src={"/Education/onum2.jpg"}
             alt="Image 2"
             width={150}
             height={300}
@@ -25,7 +25,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum3.jpg"}
+            src={"/Education/onum3.jpg"}
             alt="Image 3"
             width={150}
             height={300}
@@ -34,7 +34,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum4.jpg"}
+            src={"/Education/onum4.jpg"}
             alt="Image 4"
             width={134}
             height={300}
@@ -43,7 +43,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum5.jpg"}
+            src={"/Education/onum5.jpg"}
             alt="Image 5"
             width={150}
             height={300}
@@ -52,7 +52,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum6.jpg"}
+            src={"/Education/onum6.jpg"}
             alt="Image 6"
             width={150}
             height={300}
@@ -61,7 +61,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum7.jpg"}
+            src={"/Education/onum7.jpg"}
             alt="Image 7"
             width={112}
             height={300}
@@ -70,7 +70,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum8.jpg"}
+            src={"/Education/onum8.jpg"}
             alt="Image 8"
             width={150}
             height={300}
@@ -79,7 +79,7 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
         </div>
         <div className="carousel-item">
           <Image
-            src={"/education/onum9.jpg"}
+            src={"/Education/onum9.jpg"}
             alt="Image 9"
             width={200}
             height={300}
@@ -90,3 +90,108 @@ export default function MarqueeWrapper() { // Renamed the component to avoid con
     </div>
   );
 }
+{/* <Marquee speed={60} gradient={false}>
+          <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+            <Link
+              href={"https://www.amman.co.id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/amman.png"}
+                alt="AMMAN MINERAL"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://vale.com/in/indonesia"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/vale.png"}
+                alt="Vale"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://sumbawatimurmining.com/id/home-id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/STM.png"}
+                alt="Sumbawa Timur Mining"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://brin.go.id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/BRIN.png"}
+                alt="BRIN"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://www.amman.co.id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/amman.png"}
+                alt="AMMAN MINERAL"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://vale.com/in/indonesia"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/vale.png"}
+                alt="Vale"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://sumbawatimurmining.com/id/home-id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/STM.png"}
+                alt="Sumbawa Timur Mining"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              />
+            </Link>
+            <Link
+              href={"https://brin.go.id/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/testimonial/BRIN.png"}
+                alt="BRIN"
+                height={80}
+                width={80}
+                className="t hover:scale-100"
+              /> */}

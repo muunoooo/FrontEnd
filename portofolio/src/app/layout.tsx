@@ -3,9 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footbar from "@/components/footer";
 
-
 export const metadata: Metadata = {
-  title: "Muno",
+  title: "Portofolio Muno",
   description: "Portofolio Muno",
 };
 
@@ -16,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`Poppins.className antialiased`}
-      >
-        <Navbar/>
+      <body className={`Poppins.className antialiased`}>
+        <Navbar />
         {children}
-        <Footbar/>
+        <Footbar />
       </body>
     </html>
   );
