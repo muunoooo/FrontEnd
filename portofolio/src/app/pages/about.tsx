@@ -1,4 +1,4 @@
-import MarqueeWrapper from "@/components/marquee";
+
 import SkillsMarquee from "@/components/skills";
 import Wrapper from "@/components/wrapper";
 import Image from "next/image";
