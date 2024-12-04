@@ -1,3 +1,4 @@
+import { formatDate } from "@/helpers/formatDate";
 import { splitStr } from "@/helpers/split";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +58,7 @@ export default function Card({
               {email}
             </p>
             <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-              {createdAt}
+              {formatDate(createdAt)}
             </p>
           </div>
         </div>

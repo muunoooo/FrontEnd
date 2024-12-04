@@ -8,7 +8,9 @@ const nextConfig = {
         'w0.peakpx.com',
         'encrypted-tbn0.gstatic.com', 
         'images.ctfassets.net', 
-        'lh3.googleusercontent.com'
+        'lh3.googleusercontent.com',
+        "localhost",
+        "res.cloudinary.com"
       ],
     },
   };
