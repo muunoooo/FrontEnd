@@ -1,6 +1,7 @@
 "use client";
 
 import { Input } from "@/components/form/input";
+import { useSession } from "@/context/useSession";
 import { Form, Formik, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -21,6 +22,7 @@ interface FormValues {
 
 export default function RegisterPage() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { setIsAuth, setUser } = useSession();
   const router = useRouter();
   const initialValue: FormValues = {
     data: "",
@@ -40,6 +42,8 @@ export default function RegisterPage() {
       });
       const result = await res.json();
       if (!res.ok) throw result;
+      setIsAuth(true);
+      setUser(result.user);
       router.push("/");
       toast.success(result.message);
     } catch (err: any) {
@@ -52,7 +56,7 @@ export default function RegisterPage() {
 
   return (
     <div
-      className="flex justify-center text-white"
+      className="flex justify-center text-white z-10  h-[90vh]"
       style={{
         backgroundImage: 'url("/background.jpg")',
         backgroundSize: "cover",
