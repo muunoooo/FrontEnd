@@ -43,7 +43,7 @@ export default async function BlogDetail({
   params: { slug: string };
 }) {
   const blog: IBlog = await getBlogSLug(params.slug);
-  const blogNe: IBlog [] = await getBlogRecom(params.slug)
+  const blogNe: IBlog[] = await getBlogRecom(params.slug);
 
   const options: Options = {
     renderMark: {
@@ -73,7 +73,7 @@ export default async function BlogDetail({
               back home
             </Link>
           </div>
-          <RecommendationBlog blogs={blogNe}/>
+          <RecommendationBlog blogs={blogNe} />
           <ShareButton slug={blog.fields.slug} />
         </div>
         <div className="flex-[2] box-content pr-56 max-lg:pr-0">
@@ -91,12 +91,13 @@ export default async function BlogDetail({
           <div className="md:hidden">
             <ShareButton slug={blog.fields.slug} />
           </div>
-          <div className="h-[400px] max-md:h-[300px] max-sm:h-[250px] w-full relative my-4">
+
+          <div className="rounded-t-lg h-[500px] w-full relative overflow-hidden">
             <Image
+              className="object-cover rounded-t-lg"
               src={`https:${blog.fields.thumbnail.fields.file.url}`}
               alt={blog.fields.slug}
               fill
-              className="object-fill"
               priority
             />
           </div>

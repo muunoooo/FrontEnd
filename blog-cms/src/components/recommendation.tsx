@@ -8,13 +8,18 @@ export default function RecommendationBlog({ blogs }: { blogs: IBlog[] }) {
     <div className="flex flex-col gap-5">
       <p>Read more...</p>
       {blogs.map((item, idx) => (
-        <Link key={idx} href={`${item.fields.slug}`} className="flex flex-row gap-2 text-sm relative">
-          <div className="w-[100px] h-[100px] relative">
+        <Link
+          key={idx}
+          href={`${item.fields.slug}`}
+          className="flex flex-row gap-2 text-sm relative"
+        >
+          <div className="rounded-t-lg h-[80px] w-full relative overflow-hidden">
             <Image
-              className="object-fill hover:scale-110"
+              className="object-cover rounded-t-lg"
               src={`https:${item.fields.thumbnail.fields.file.url}`}
               alt={item.fields.slug}
               fill
+              priority
             />
           </div>
           <p className="line-clamp-2">{item.fields.title}</p>

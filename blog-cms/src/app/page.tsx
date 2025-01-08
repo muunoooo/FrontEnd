@@ -7,7 +7,7 @@ export default async function Home() {
   const data: IBlog[] = await getBlogs();
   return (
     <div
-      className="z-10 lg:h-auto h-auto"
+      className="z-10 lg:h-auto h-auto "
       style={{
         backgroundImage: 'url("/background.jpg")',
         backgroundSize: "cover",

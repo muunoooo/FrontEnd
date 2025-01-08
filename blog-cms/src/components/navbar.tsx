@@ -21,15 +21,20 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="h-[60px] w-full bg-white shadow-md z-10 sticky top-0 px-20">
-      <div className="flex items-center justify-between h-full px-4">
+    <div className="h-[60px] w-full bg-black top-0 px-4 md:px-20">
+      <div className="flex items-center justify-between h-full">
+        {/* Logo */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-lg font-semibold">便りKonoha News</span>
+            <span className="text-xl font-bold text-white hover:text-gray-200 transition">
+              Berita Terkini
+            </span>
           </Link>
         </div>
 
-        <div className="ml-auto">
+        {/* Right Section */}
+        <div className="ml-auto flex items-center gap-4">
+          {/* User Section */}
           {user ? (
             <Avatar
               picture={user.user_metadata.picture}
