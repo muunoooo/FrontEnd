@@ -21,14 +21,13 @@ import { defaultDominoes } from "./data";
 export default function App() {
   const [dominoes, setDominoes] = useState<[number, number][]>(defaultDominoes);
   const [removeTotalInput, setRemoveTotalInput] = useState<number | "">("");
-  const [cardA, setCardA] = useState<number>(0); // state untuk input pertama (a)
-  const [cardB, setCardB] = useState<number>(0); // state untuk input kedua (b)
+  const [cardA, setCardA] = useState<number>(0); 
+  const [cardB, setCardB] = useState<number>(0); 
 
   const handleAddCard = () => {
-    // Panggil addCard dan reset input setelah kartu ditambahkan
     addCard(cardA, cardB, setDominoes);
-    setCardA(0); // Reset input pertama
-    setCardB(0); // Reset input kedua
+    setCardA(0); 
+    setCardB(0);
   };
 
   return (
@@ -173,7 +172,7 @@ export default function App() {
                 </div>
 
                 <button
-                  onClick={handleAddCard} // Panggil handleAddCard untuk menambahkan kartu dan mereset input
+                  onClick={handleAddCard}
                   className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
                 >
                   Add Domino ({cardA}, {cardB})

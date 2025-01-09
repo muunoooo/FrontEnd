@@ -80,7 +80,7 @@ export const addCard = (
 };
 
 export const renderDots = (number: number, isDouble: boolean) => {
-  const positions = dominoPositon[number] || []; // Pastikan dominoPositon ada dan terdefinisi
+  const positions = dominoPositon[number] || [];
 
   return Array.from({ length: 9 }, (_, idx) => (
     <div
@@ -88,8 +88,8 @@ export const renderDots = (number: number, isDouble: boolean) => {
       className={`flex justify-center items-center h-2 w-2 ${
         positions.includes(idx + 1)
           ? isDouble
-            ? "bg-orange-400 rounded-full" // Warna untuk double
-            : "bg-teal-400 rounded-full" // Warna untuk non-double
+            ? "bg-orange-400 rounded-full" 
+            : "bg-teal-400 rounded-full" 
           : "text-transparent"
       }`}
     ></div>
