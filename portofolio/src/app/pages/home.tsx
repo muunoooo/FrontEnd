@@ -29,28 +29,28 @@ export default function HomePage() {
             <p className="font-bold">my name is</p>
             <strong className="text-5xl font-bold">Muhammad Naufal!</strong>
             <div>
-              <TypeAnimation
-                className=" font-bold"
-                sequence={[
-                  "I'm A Developer",
-                  2000,
-                  "I'm A Programmer",
-                  2000,
-                  "I'm A Coder",
-                  2000,
-                  "I'm A Full-Stack Developer",
-                  2000,
-                  "I'm A Tech Developer.",
-                  2000,
-                  () => {
-                    console.log("Sequence completed");
-                  },
-                ]}
-                wrapper="span"
-                cursor={true}
-                repeat={Infinity}
-                style={{ fontSize: "1rem", display: "inline-block" }}
-              />
+                <TypeAnimation
+                  className=" font-bold"
+                  sequence={[
+                    "I'm A Developer",
+                    2000,
+                    "I'm A Programmer",
+                    2000,
+                    "I'm A Coder",
+                    2000,
+                    "I'm A Full-Stack Developer",
+                    2000,
+                    "I'm A Tech Developer.",
+                    2000,
+                    () => {
+                      console.log("Sequence completed");
+                    },
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{ fontSize: "1rem", display: "inline-block" }}
+                />
             </div>
           </div>
         </div>
