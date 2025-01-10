@@ -8,19 +8,30 @@ export const sortDominoes = (
   dominoes: [number, number][],
   order: "asc" | "desc"
 ): [number, number][] => {
-  const grouped = dominoes.reduce<Record<number, [number, number][]>>((acc, item) => {
-    const total = item[0] + item[1];
-    if (!acc[total]) acc[total] = [];
-    acc[total].push(item);
-    return acc;
-  }, {});
+  const grouped: [number, [number, number][]][] = [];
 
-  const sortedTotals = Object.keys(grouped)
-    .map(Number)
-    .sort((a, b) => (order === "asc" ? a - b : b - a));
+  for (const domino of dominoes) {
+    const total = domino[0] + domino[1];
+    const group = grouped.find(([key]) => key === total);
+    if (group) {
+      group[1].push(domino);
+    } else {
+      grouped.push([total, [domino]]);
+    }
+  }
 
-  return sortedTotals.flatMap(total => grouped[total]);
+  grouped.sort((a, b) =>
+    order === "asc" ? a[0] - b[0] : b[0] - a[0]
+  );
+
+  const result: [number, number][] = [];
+  for (const [, dominoesGroup] of grouped) {
+    result.push(...dominoesGroup);
+  }
+
+  return result;
 };
+
 
 
 export const removeDuplicates = (
