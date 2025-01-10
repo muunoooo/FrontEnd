@@ -11,6 +11,7 @@ export const sortDominoes = (
   dominoes: [number, number][],
   order: "asc" | "desc"
 ): [number, number][] => {
+  // Mengelompokkan domino berdasarkan jumlah nilai total
   const grouped: [number, [number, number][]][] = [];
 
   for (const domino of dominoes) {
@@ -23,9 +24,13 @@ export const sortDominoes = (
     }
   }
 
-  grouped.sort((a, b) =>
-    order === "asc" ? a[0] - b[0] : b[0] - a[0]
-  );
+  grouped.sort((a, b) => (order === "asc" ? a[0] - b[0] : b[0] - a[0]));
+
+  for (const group of grouped) {
+    group[1].sort((a, b) =>
+      order === "asc" ? a[0] - b[0] || a[1] - b[1] : b[0] - a[0] || b[1] - a[1]
+    );
+  }
 
   const result: [number, number][] = [];
   for (const [, dominoesGroup] of grouped) {
@@ -35,16 +40,14 @@ export const sortDominoes = (
   return result;
 };
 
-
-
 export const removeDuplicates = (
   dominoes: [number, number][]
 ): [number, number][] => {
   const uniqueDominoes: Set<string> = new Set();
   const duplicates: Set<string> = new Set();
 
-  dominoes.forEach(item => {
-    const sortedItem = [...item].sort((a, b) => a - b).join(',');
+  dominoes.forEach((item) => {
+    const sortedItem = [...item].sort((a, b) => a - b).join(",");
 
     if (uniqueDominoes.has(sortedItem)) {
       duplicates.add(sortedItem);
@@ -53,15 +56,11 @@ export const removeDuplicates = (
     }
   });
 
-  return dominoes.filter(item => {
-    const sortedItem = [...item].sort((a, b) => a - b).join(','); 
+  return dominoes.filter((item) => {
+    const sortedItem = [...item].sort((a, b) => a - b).join(",");
     return !duplicates.has(sortedItem);
   });
 };
-
-
-
-
 
 const removeByTotal = (
   dominoes: [number, number][],
@@ -104,8 +103,8 @@ export const renderDots = (number: number, isDouble: boolean) => {
       className={`flex justify-center items-center h-2 w-2 ${
         positions.includes(idx + 1)
           ? isDouble
-            ? "bg-orange-400 rounded-full" 
-            : "bg-teal-400 rounded-full" 
+            ? "bg-orange-400 rounded-full"
+            : "bg-teal-400 rounded-full"
           : "text-transparent"
       }`}
     ></div>
