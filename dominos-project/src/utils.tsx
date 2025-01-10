@@ -3,6 +3,9 @@ import { dominoPositon } from "./data";
 export const countDoubles = (dominoes: [number, number][]): number => {
   return dominoes.filter(([a, b]) => a === b).length;
 };
+export const flipCards = (dominoes: [number, number][]): [number, number][] => {
+  return dominoes.map(([a, b]) => [b, a]);
+};
 
 export const sortDominoes = (
   dominoes: [number, number][],
@@ -59,9 +62,6 @@ export const removeDuplicates = (
 
 
 
-export const flipCards = (dominoes: [number, number][]): [number, number][] => {
-  return dominoes.map(([a, b]) => [b, a]);
-};
 
 const removeByTotal = (
   dominoes: [number, number][],
