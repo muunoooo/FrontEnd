@@ -88,14 +88,14 @@ export default function App() {
               <button
                 className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
                 onClick={() => setDominoes(sortDominoes(dominoes, "asc"))}
-                title="Card Sort Descending"
+                title="Card Sort Ascending"
               >
                 <ArrowDownNarrowWide className="w-5 h-5" />
               </button>
               <button
                 className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
                 onClick={() => setDominoes(sortDominoes(dominoes, "desc"))}
-                title="Card Sort Ascending"
+                title="Card Sort Descending"
               >
                 <ArrowUpNarrowWide className="w-5 h-5" />
               </button>

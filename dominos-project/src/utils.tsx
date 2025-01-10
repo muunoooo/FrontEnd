@@ -8,15 +8,20 @@ export const sortDominoes = (
   dominoes: [number, number][],
   order: "asc" | "desc"
 ): [number, number][] => {
-  return [...dominoes].sort((a, b) => {
-    const totalA = a[0] + a[1];
-    const totalB = b[0] + b[1];
-    if (totalA === totalB) {
-      return order === "asc" ? a[0] - b[0] : b[0] - a[0];
-    }
-    return order === "asc" ? totalA - totalB : totalB - totalA;
-  });
+  const grouped = dominoes.reduce<Record<number, [number, number][]>>((acc, item) => {
+    const total = item[0] + item[1];
+    if (!acc[total]) acc[total] = [];
+    acc[total].push(item);
+    return acc;
+  }, {});
+
+  const sortedTotals = Object.keys(grouped)
+    .map(Number)
+    .sort((a, b) => (order === "asc" ? a - b : b - a));
+
+  return sortedTotals.flatMap(total => grouped[total]);
 };
+
 
 export const removeDuplicates = (
   dominoes: [number, number][]
