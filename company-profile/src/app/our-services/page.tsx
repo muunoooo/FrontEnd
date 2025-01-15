@@ -1,4 +1,4 @@
-import Card from "@/components/card";
+import Card from "@/components/UI/card";
 import Wrapper from "@/components/wrapper";
 import { getServices } from "@/libs/blog";
 import { IServices } from "@/types/blog";

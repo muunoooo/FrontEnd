@@ -51,7 +51,7 @@ export default function HomePage() {
                 height={500}
                 priority
                 sizes="(max-width: 768px) 80vw, 500px"
-                className="w-full md:w-[500px] h-auto max-w-sm rounded-lg shadow-2xl"
+                className="w-full md:w-[500px] h-auto max-w-sm rounded-lg "
                 style={{ objectFit: "contain" }}
               />
             </div>

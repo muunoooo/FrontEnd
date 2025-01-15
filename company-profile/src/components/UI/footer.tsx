@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export default function Footbar() {
   return (
-    <footer className="footer footer-center bg-black rounded p-10 text-white">
+    <footer className="footer footer-center bg-black rounded p-10 
+    text-white dark:text-white">
       <nav className="grid grid-flow-col gap-4">
         <Link
           href={"/about-us"}

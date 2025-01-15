@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/UI/navbar";
 import { Source_Sans_3 } from "next/font/google";
-import Footer from "@/components/footer";
+import Footer from "@/components/UI/footer";
 
 
 

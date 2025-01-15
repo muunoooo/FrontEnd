@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ICardBlog {
+interface ICardServices {
   title: string;
   image: string;
   slug: string;
@@ -9,7 +9,7 @@ interface ICardBlog {
   output: string;
 }
 
-export default function Card({ title, image, slug, input, output }: ICardBlog) {
+export default function Card({ title, image, slug, input, output }: ICardServices) {
   return (
     <div className="bg-black border flex flex-col justify-center items-center object-center border-gray-200 rounded-lg shadow w-[200px] h-[440px] hover:scale-95">
       <div className="relative w-full h-[200px]">
@@ -17,9 +17,7 @@ export default function Card({ title, image, slug, input, output }: ICardBlog) {
           className="rounded-t-lg object-cover"
           src={`https:${image}`}
           alt={title}
-          width={200} 
-          height={200} 
-          sizes="(max-width: 768px) 100vw, 200px" 
+          fill
           priority
           fetchPriority="high" 
         />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-gray-800">
+    <div className="navbar bg-gray-800 dark:text-white text-white">
       <div className="flex-1">
         <Link href={"/"} aria-label="Go to Geovasi Home Page">
           <Image

@@ -1,12 +1,13 @@
 "use client";
 
 import Director from "@/components/TeamPage/Director";
-import Staff from "@/components/TeamPage/Staff";
+
+import GeovasiTeam from "@/components/TeamPage/Team";
 import Wrapper from "@/components/wrapper";
 
 export default function TeamSection() {
   return (
-    <div className="mx-2 bg-black text-white"> {/* Black background with white text for good contrast */}
+    <div className="mx-2 bg-black text-white">
       <Wrapper>
         <div className="flex flex-col gap-5 justify-center items-center text-center">
           <div className="text-3xl md:text-4xl mt-7 text-[#45daf8]">
@@ -59,7 +60,7 @@ export default function TeamSection() {
             </p>
           </div>
           <Director />
-          <Staff />
+          <GeovasiTeam />
         </div>
       </Wrapper>
     </div>

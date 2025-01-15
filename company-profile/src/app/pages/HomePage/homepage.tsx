@@ -27,8 +27,8 @@ export default function HomePage() {
                 width={600}
                 height={600}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="rounded-lg shadow-2xl w-full h-auto" 
-                style={{ objectFit: "cover" }} 
+                className="rounded-lg shadow-2xl w-full h-auto"
+                style={{ objectFit: "cover" }}
               />
             </div>
 

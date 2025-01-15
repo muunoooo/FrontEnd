@@ -3,7 +3,7 @@ import React from "react";
 
 export default function VissionMissionPage() {
   return (
-    <div className="bg-[#0b2a33]">
+    <div className="bg-[#0d3645]">
       <Wrapper>
         <div className="flex flex-col justify-center text-center gap-3 pt-7">
           <div className="flex flex-col gap-7">
